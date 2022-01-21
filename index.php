@@ -12,7 +12,7 @@
     $game[0]['online/offline'] = 'Online';
     
     $game[1]['name'] = 'LOL';
-    $game[1]['price'] = free;
+    $game[1]['price'] = "free";
     $game[1]['description'] ='Blbá hra';
     $game[1]['game type'] = 'Kompetetivní';
     $game[1]['online/offline'] = 'Online';
@@ -78,13 +78,14 @@
   
 //////////////////////////////////////////////////////////////////////////////////////////////////////    
 
-    for ($i=0; $i < count($game); $i++) { ?>
+    for ($i=0; $i < count($people); $i++) { ?>
         
-            <h2><?= $game[$i]['name']; ?> </h2>
-            <p><strong>Cena:</strong><?= $game[i]['price']; ?></p>
-            <p><strong>Popis:</strong><?= $game[i]['descriprion']; ?></p>
-            <p><strong>Typ hry:</strong><?= $game[i]['game type']; ?></p>
-            <p><strong>Online nebo offline:</strong><?= $game[i]['online/offline']; ?></p>
+            <h2><?= $people[$i]['firstname']; ?> </h2>
+            <p><strong>Atraktivita:</strong><?= $people[$i]['atractivity']; ?></p>
+            <p><strong>Vlastnost:</strong><?= $people[$i]['skill']; ?></p>
+            <p><strong>Typ hry:</strong><?= $people[$i]['game']['name']; ?></p>
+            <p><strong>Síla:</strong><?= $people[$i]['strenght']; ?></p>
+            
     <?php
     }
     
